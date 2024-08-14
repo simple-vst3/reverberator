@@ -21,6 +21,9 @@ ReverbAudioProcessorEditor::ReverbAudioProcessorEditor (ReverbAudioProcessor& p)
     
     addAndMakeVisible(sizeKnob);
     addAndMakeVisible(dampKnob);
+
+    addAndMakeVisible(freezeButton);
+
     addAndMakeVisible(widthKnob);
     addAndMakeVisible(mixKnob);
 
@@ -50,12 +53,15 @@ void ReverbAudioProcessorEditor::resized()
     auto bounds = getLocalBounds();
     auto  currWidth = WIDTH;
     const int TOP_HEIGHT = 50;
-    const int KNOB_WIDTH = sizeKnob.getWidth();
+    const int KNOB_WIDTH = sizeKnob.getWidth(), KNOB_HEIGHT = sizeKnob.getHeight();
 
     const int xOffset = KNOB_WIDTH + 25;
     
     sizeKnob.setTopLeftPosition(currWidth/4 - xOffset, TOP_HEIGHT);
     dampKnob.setTopLeftPosition(2*currWidth / 4 - xOffset, TOP_HEIGHT);
+
+    freezeButton.setBounds((currWidth + MID_GAP) / 2 - KNOB_WIDTH/2, TOP_HEIGHT, KNOB_WIDTH, KNOB_HEIGHT);
+
     widthKnob.setTopLeftPosition(3*currWidth / 4 - xOffset + MID_GAP, TOP_HEIGHT);
     mixKnob.setTopLeftPosition(currWidth - xOffset + MID_GAP, TOP_HEIGHT);
 

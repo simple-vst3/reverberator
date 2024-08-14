@@ -5,9 +5,19 @@
               pluginManufacturer="dreaesposito" pluginCode="VERB" pluginVST3Category="Fx,Reverb"
               cppLanguageStandard="20" pluginFormats="buildStandalone,buildVST3">
   <MAINGROUP id="jHxp3E" name="reverberator">
+    <GROUP id="{D2DA2A0B-5A11-2987-7548-6B670AEBB5FE}" name="Resources">
+      <FILE id="aGTMxK" name="freezeIcon.svg" compile="0" resource="1" file="Resources/freezeIcon.svg"/>
+    </GROUP>
     <GROUP id="{A7453EB6-BE0B-FECE-2B67-3A779868DB47}" name="Source">
-      <FILE id="eSizG3" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
-      <FILE id="Y9mi4b" name="LookAndFeel.h" compile="0" resource="0" file="Source/LookAndFeel.h"/>
+      <GROUP id="{180CF8C9-4C59-80A3-EFD9-F4A957BCE979}" name="ui">
+        <FILE id="Y9mi4b" name="LookAndFeel.h" compile="0" resource="0" file="Source/LookAndFeel.h"/>
+        <FILE id="mBhBvM" name="RotaryKnob.h" compile="0" resource="0" file="Source/RotaryKnob.h"/>
+        <FILE id="ZMsJk7" name="FreezeButton.cpp" compile="1" resource="0"
+              file="Source/FreezeButton.cpp"/>
+        <FILE id="T4fmKf" name="RotaryKnob.cpp" compile="1" resource="0" file="Source/RotaryKnob.cpp"/>
+        <FILE id="lewQi8" name="FreezeButton.h" compile="0" resource="0" file="Source/FreezeButton.h"/>
+        <FILE id="eSizG3" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
+      </GROUP>
       <FILE id="UZCDz6" name="Params.cpp" compile="1" resource="0" file="Source/Params.cpp"/>
       <FILE id="HbsIx8" name="Params.h" compile="0" resource="0" file="Source/Params.h"/>
       <FILE id="yXVjYK" name="PluginEditor.cpp" compile="1" resource="0"
@@ -17,8 +27,6 @@
             file="Source/PluginProcessor.cpp"/>
       <FILE id="Ub43mF" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="T4fmKf" name="RotaryKnob.cpp" compile="1" resource="0" file="Source/RotaryKnob.cpp"/>
-      <FILE id="mBhBvM" name="RotaryKnob.h" compile="0" resource="0" file="Source/RotaryKnob.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>

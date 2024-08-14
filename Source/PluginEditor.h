@@ -14,6 +14,7 @@
 #include "Params.h" 
 #include "RotaryKnob.h"
 #include "LookAndFeel.h"
+#include "FreezeButton.h"
 
 //==============================================================================
 /**
@@ -38,7 +39,9 @@ private:
     RotaryKnob sizeKnob{ "size", audioProcessor.apvts, ParamID::size, false };
     RotaryKnob dampKnob{ "damp", audioProcessor.apvts, ParamID::damp, false };
     RotaryKnob widthKnob{ "width", audioProcessor.apvts, ParamID::width, false };
-    RotaryKnob mixKnob{ "mix", audioProcessor.apvts, ParamID::mix, false };
+    RotaryKnob mixKnob{ "mix", audioProcessor.apvts, ParamID::mix.getParamID(), false };
+
+    FreezeButton freezeButton{ audioProcessor.apvts, ParamID::freeze.getParamID() };
 
     juce::Label logo;
 
